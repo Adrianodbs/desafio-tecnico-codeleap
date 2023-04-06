@@ -5,7 +5,6 @@ import './style.css'
 import { AppContext } from '../../context/appContext'
 import ModalDelete from '../../components/Modal'
 import UpdateModal from '../../components/UpdateModal'
-import { useState } from 'react'
 
 function Main() {
   const {

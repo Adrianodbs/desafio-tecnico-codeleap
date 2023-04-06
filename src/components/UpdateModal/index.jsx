@@ -4,8 +4,7 @@ import './style.css'
 import { AppContext } from '../../context/appContext'
 
 function UpdateModal({ onClickCancel, onClickUpdate }) {
-  const { title, setTitle, content, setContent, updatedItem, setUpdatedItem } =
-    useContext(AppContext)
+  const { updatedItem, setUpdatedItem } = useContext(AppContext)
   return (
     <div className="modal-container">
       <div className="modal-edit">
