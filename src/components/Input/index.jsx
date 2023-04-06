@@ -9,6 +9,7 @@ function Input({ title, placeholder, value, onChange }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required
       />
     </label>
   )
