@@ -23,6 +23,12 @@
   height: 334px;
   display: flex;
   flex-direction: column;
+}
+
+.container form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 24px;
 }
 
