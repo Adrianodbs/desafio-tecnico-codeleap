@@ -8,6 +8,11 @@ export const AppProvider = ({ children }) => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [posts, setPosts] = useState([])
+  const [openModal, setOpenModal] = useState(false)
+  const [openUpdateModal, setOpenUpdateModal] = useState(false)
+  const [deleteItem, setDeleteItem] = useState('')
+  const [updatedItem, setUpdatedItem] = useState({ title: '', content: '' })
+
   return (
     <AppContext.Provider
       value={{
@@ -18,7 +23,15 @@ export const AppProvider = ({ children }) => {
         content,
         setContent,
         posts,
-        setPosts
+        setPosts,
+        openModal,
+        setOpenModal,
+        openUpdateModal,
+        setOpenUpdateModal,
+        deleteItem,
+        setDeleteItem,
+        updatedItem,
+        setUpdatedItem
       }}
     >
       {children}

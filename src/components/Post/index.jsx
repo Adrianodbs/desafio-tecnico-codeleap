@@ -4,14 +4,14 @@ import { FiEdit } from 'react-icons/fi'
 import { useContext } from 'react'
 import { AppContext } from '../../context/appContext'
 
-function Post({ title, content, onClick }) {
+function Post({ title, content, deletar, update }) {
   return (
     <div className="post">
       <div className="post__header">
         <h3>{title}</h3>
         <div className="icons">
-          <TbTrashX onClick={onClick} />
-          <FiEdit />
+          <TbTrashX onClick={deletar} />
+          <FiEdit onClick={update} />
         </div>
       </div>
       <div className="post__content">

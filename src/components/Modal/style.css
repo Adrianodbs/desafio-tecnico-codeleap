@@ -1,0 +1,53 @@
+.modal-container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.5);
+  z-index: 99;
+}
+.modal-edit{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 660px;
+  height: 146px;
+  border: 1px solid #999999;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0,0,0, 0.8);
+}
+
+.btn{
+  display: flex;
+  align-self: flex-end;
+  gap: 16px;
+
+}
+
+.btn button{
+  width: 120px;
+  height: 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-cancel{
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  color: #000;
+}
+
+.btn-delete{
+  background: #FF5151;
+  color: #fff;
+  border: none;
+}
