@@ -25,3 +25,8 @@
   flex-direction: column;
   gap: 24px;
 }
+
+.content{
+  width: 752px;
+  margin-top: 24px;
+}

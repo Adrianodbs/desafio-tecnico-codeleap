@@ -1,4 +1,5 @@
 import Input from '../../components/Input'
+import Post from '../../components/Post'
 import './style.css'
 
 function Main() {
@@ -12,6 +13,9 @@ function Main() {
         <Input title="Title" placeholder="Hello world" />
         <Input title="Content" placeholder="Content here" />
         <button>Create</button>
+      </div>
+      <div className="content">
+        <Post />
       </div>
     </div>
   )
