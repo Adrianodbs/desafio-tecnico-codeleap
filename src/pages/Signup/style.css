@@ -1,0 +1,30 @@
+.container{
+  background-color: #fff;
+  width: 500px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.container h2{
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.container button{
+  width: 111px;
+  height: 32px;
+  background: #7695EC;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  align-self: flex-end;
+  cursor: pointer;
+}
