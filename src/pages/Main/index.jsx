@@ -5,6 +5,7 @@ import './style.css'
 import { AppContext } from '../../context/appContext'
 import ModalDelete from '../../components/Modal'
 import UpdateModal from '../../components/UpdateModal'
+import { v4 as uuidv4 } from 'uuid'
 
 function Main() {
   const {
@@ -28,7 +29,8 @@ function Main() {
     e.preventDefault()
     const data = {
       title,
-      content
+      content,
+      id: uuidv4()
     }
     setPosts(prev => [...prev, data])
     setTitle('')
@@ -48,7 +50,7 @@ function Main() {
   const handleDeleteItem = () => {
     setPosts(prev => {
       const newArray = [...prev]
-      return newArray.filter(item => item.title !== deleteItem)
+      return newArray.filter(item => item.id !== deleteItem)
     })
     setOpenModal(false)
   }
@@ -61,7 +63,7 @@ function Main() {
 
   const handleUpdateItem = (updatedTitle, updatedContent) => {
     const updatedItems = posts.map(item => {
-      if (item.title === deleteItem) {
+      if (item.id === deleteItem) {
         return { ...item, title: updatedTitle, content: updatedContent }
       }
       return item
@@ -91,6 +93,7 @@ function Main() {
             placeholder="Content here"
             value={content}
             onChange={e => setContent(e.target.value)}
+            className="double"
           />
           <button type="submit">Create</button>
         </form>
@@ -99,8 +102,8 @@ function Main() {
         {posts.map((post, i) => (
           <ul key={i}>
             <Post
-              deletar={() => handleClickDelete(post.title)}
-              update={() => handleClickUpdate(post.title)}
+              deletar={() => handleClickDelete(post.id)}
+              update={() => handleClickUpdate(post.id)}
               title={post.title}
               content={post.content}
             />

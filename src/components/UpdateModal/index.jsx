@@ -24,6 +24,7 @@ function UpdateModal({ onClickCancel, onClickUpdate }) {
           onChange={e =>
             setUpdatedItem({ ...updatedItem, content: e.target.value })
           }
+          className="double"
         />
         <div className="btn">
           <button className="btn-cancel" onClick={onClickCancel}>

@@ -18,6 +18,10 @@
   padding-left: 10px;
 }
 
+.input .double{
+  height: 74px;
+}
+
 .input input::placeholder{
   font-weight: 400;
   font-size: 14px;

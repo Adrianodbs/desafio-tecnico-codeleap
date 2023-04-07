@@ -1,6 +1,6 @@
 import './style.css'
 
-function Input({ title, placeholder, value, onChange }) {
+function Input({ title, placeholder, value, onChange, className }) {
   return (
     <label className="input">
       <span>{title}</span>
@@ -9,6 +9,7 @@ function Input({ title, placeholder, value, onChange }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        className={className}
         required
       />
     </label>

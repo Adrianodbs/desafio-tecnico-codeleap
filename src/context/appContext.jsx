@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useEffect } from 'react'
 
 export const AppContext = createContext({})
 
@@ -11,6 +11,20 @@ export const AppProvider = ({ children }) => {
   const [openUpdateModal, setOpenUpdateModal] = useState(false)
   const [deleteItem, setDeleteItem] = useState('')
   const [updatedItem, setUpdatedItem] = useState({ title: '', content: '' })
+
+  //Buscar
+  useEffect(() => {
+    const postStorage = localStorage.getItem('posts-codeleap')
+
+    if (postStorage) {
+      setPosts(JSON.parse(postStorage))
+    }
+  }, [])
+
+  //Salvar alterações
+  useEffect(() => {
+    localStorage.setItem('posts-codeleap', JSON.stringify(posts))
+  }, [posts])
 
   return (
     <AppContext.Provider
